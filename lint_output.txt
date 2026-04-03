@@ -1,0 +1,27 @@
+
+> myportfolio24@0.0.0 lint
+> eslint .
+
+
+D:\reactjs\myportfolio24\src\components\Education.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\reactjs\myportfolio24\src\components\Footer.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\reactjs\myportfolio24\src\components\Hero.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\reactjs\myportfolio24\src\components\Navigation.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u        no-unused-vars
+  2:29  error  'useTransform' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\reactjs\myportfolio24\src\components\Projects.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  5:57  error  'features' is defined but never used                                           no-unused-vars
+
+D:\reactjs\myportfolio24\src\components\Skills.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Γ£û 8 problems (8 errors, 0 warnings)
+

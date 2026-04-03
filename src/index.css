@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply antialiased scroll-smooth;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+.glow-pulse {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px 0px rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 5px 0px rgba(59, 130, 246, 0.1);
+  }
+}
+
+/* Hide scrollbar for bento grid if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
