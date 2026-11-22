@@ -229,7 +229,9 @@ const ProjectCard = ({ project, index }) => {
             <motion.a
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
-              href="#"
+              href="https://github.com/chandux242407"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2.5 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 rounded-xl transition-colors"
             >
               <Github size={20} />

@@ -202,7 +202,7 @@ const Skills = () => {
 
   const stats = [
     { 
-      label: "Years Experience", 
+      label: "Years of Coding", 
       value: 3, 
       suffix: "+",
       icon: Trophy,
