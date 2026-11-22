@@ -65,7 +65,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-row gap-4 w-full justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-4 w-full justify-center lg:justify-start"
             >
               <motion.a 
                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(37, 99, 235, 0.4)" }}
@@ -73,7 +73,7 @@ const Hero = () => {
                 href="/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors shadow-lg shadow-blue-500/30"
+                className="flex items-center justify-center gap-2 px-6 sm:px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors shadow-lg shadow-blue-500/30 w-full sm:w-auto"
               >
                 <Download size={20} />
                 View Resume
@@ -83,7 +83,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(59, 130, 246, 0.1)" }}
                 whileTap={{ scale: 0.95 }}
                 href="#contact" 
-                className="flex items-center justify-center gap-2 px-8 py-4 border border-gray-200 dark:border-gray-700 bg-blue-50/50 dark:bg-white/5 hover:bg-blue-100 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-xl font-medium transition-colors"
+                className="flex items-center justify-center gap-2 px-6 sm:px-8 py-4 border border-gray-200 dark:border-gray-700 bg-blue-50/50 dark:bg-white/5 hover:bg-blue-100 dark:hover:bg-white/10 text-gray-900 dark:text-white rounded-xl font-medium transition-colors w-full sm:w-auto"
               >
                 <MessageCircle size={20} />
                 Let&apos;s Talk
@@ -103,7 +103,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full scale-125"></div>
               
               {/* Profile Container with Multi-layered Gradient Border */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-[2px] bg-gradient-to-tr from-blue-500 via-blue-500/50 to-transparent shadow-2xl">
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full p-[2px] bg-gradient-to-tr from-blue-500 via-blue-500/50 to-transparent shadow-2xl">
                 <div className="w-full h-full rounded-full bg-white dark:bg-[#0a0a0c] p-2 overflow-hidden">
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-md overflow-hidden flex items-center justify-center border border-white/20 dark:border-white/10">
                     <img src="/profile.jpg" alt="Yerra Gopichand" className="w-full h-full object-cover" />
@@ -116,7 +116,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute bottom-4 -right-4 md:right-0 bg-white dark:bg-[#1a1a24] py-3 px-5 rounded-2xl shadow-xl flex items-center gap-3 border border-gray-100 dark:border-white/10"
+                className="absolute bottom-4 -right-2 sm:-right-4 md:right-0 bg-white dark:bg-[#1a1a24] py-3 px-4 sm:px-5 rounded-2xl shadow-xl flex items-center gap-3 border border-gray-100 dark:border-white/10"
               >
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

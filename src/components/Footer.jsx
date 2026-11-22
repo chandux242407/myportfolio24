@@ -15,12 +15,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="relative bg-[#0a0a0c] pt-24 pb-12 overflow-hidden">
+    <footer id="contact" className="relative bg-gray-50 dark:bg-[#0a0a0c] pt-24 pb-12 overflow-hidden transition-colors duration-300">
       {/* Background: Linear gradient base with radial blue glow at top-right */}
       <div 
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none dark:block hidden"
         style={{
           background: 'linear-gradient(180deg, #0a0a0c 0%, #0f0f14 100%)'
+        }}
+      />
+      <div 
+        className="absolute inset-0 pointer-events-none block dark:hidden"
+        style={{
+          background: 'linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%)'
         }}
       />
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none" />
@@ -32,10 +38,10 @@ const Footer = () => {
           <div className="space-y-8">
             {/* Headline with blue accent on "together" */}
             <div>
-              <h2 className="text-4xl font-extrabold mb-4 text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-gray-900 dark:text-white leading-tight">
                 Let&apos;s build something <span className="text-blue-500">together.</span>
               </h2>
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg">
                 Looking for a full-stack developer? I am currently available for new projects and opportunities.
               </p>
             </div>
@@ -51,44 +57,44 @@ const Footer = () => {
               {/* Email Card */}
               <a 
                 href="mailto:chanduyerra@gmail.com" 
-                className="group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all duration-300 ease-in-out"
+                className="group flex items-center gap-3 sm:gap-4 p-4 rounded-2xl bg-white/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-blue-500/50 transition-all duration-300 ease-in-out"
               >
-                <div className="p-3 bg-blue-600/20 text-blue-400 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                  <Mail size={24} />
+                <div className="p-2.5 sm:p-3 bg-blue-600/20 text-blue-400 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                  <Mail size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 font-medium mb-1">Send an Email</p>
-                  <p className="font-semibold text-white">chanduyerra@gmail.com</p>
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-500 font-medium mb-1">Send an Email</p>
+                  <p className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">chanduyerra@gmail.com</p>
                 </div>
               </a>
               
               {/* Phone Card */}
               <a 
                 href="tel:+919392991412" 
-                className="group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all duration-300 ease-in-out"
+                className="group flex items-center gap-3 sm:gap-4 p-4 rounded-2xl bg-white/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-blue-500/50 transition-all duration-300 ease-in-out"
               >
-                <div className="p-3 bg-blue-600/20 text-blue-400 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                  <Phone size={24} />
+                <div className="p-2.5 sm:p-3 bg-blue-600/20 text-blue-400 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                  <Phone size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 font-medium mb-1">Give me a Call</p>
-                  <p className="font-semibold text-white">+91 9392991412</p>
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-500 font-medium mb-1">Give me a Call</p>
+                  <p className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">+91 9392991412</p>
                 </div>
               </a>
             </motion.div>
           </div>
 
           {/* Right Column - Navigation Grid */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8">
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6">Quick Links</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6">Quick Links</h3>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <a 
                       href={link.href}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300 ease-in-out flex items-center gap-2"
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 ease-in-out flex items-center gap-2"
                     >
                       {link.name}
                     </a>
@@ -99,7 +105,7 @@ const Footer = () => {
 
             {/* Connect - Social Icons */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6">Connect</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6">Connect</h3>
               <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
@@ -108,7 +114,7 @@ const Footer = () => {
                       key={social.name}
                       href={social.href}
                       aria-label={social.name}
-                      className={`p-3 border border-white/10 rounded-full text-gray-400 hover:text-white ${social.color} transition-all duration-300 ease-in-out`}
+                      className={`p-3 border border-gray-200 dark:border-white/10 rounded-full text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white ${social.color} transition-all duration-300 ease-in-out`}
                     >
                       <Icon size={20} />
                     </a>
@@ -117,7 +123,7 @@ const Footer = () => {
                 <a
                   href="https://github.com/chandux242407"
                   aria-label="LeetCode"
-                  className="p-3 border border-white/10 rounded-full text-gray-400 hover:text-white hover:bg-yellow-600 transition-all duration-300 ease-in-out"
+                  className="p-3 border border-gray-200 dark:border-white/10 rounded-full text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-yellow-600 transition-all duration-300 ease-in-out"
                 >
                   <ExternalLink size={20} />
                 </a>
@@ -128,10 +134,10 @@ const Footer = () => {
         </div>
         
         {/* Footer Credits with Border Divider */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <div className="pt-8 border-t border-gray-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-500">
           <p className="mb-4 md:mb-0">© {new Date().getFullYear()} Yerra Gopichand. All rights reserved.</p>
-          <p className="text-blue-500/60">
-            Built with <span className="text-blue-400">React</span>, <span className="text-blue-400">Tailwind</span> & <span className="text-blue-400">Framer Motion</span>
+          <p className="text-blue-600 dark:text-blue-500/60">
+            Built with <span className="text-blue-500 dark:text-blue-400">React</span>, <span className="text-blue-500 dark:text-blue-400">Tailwind</span> & <span className="text-blue-500 dark:text-blue-400">Framer Motion</span>
           </p>
         </div>
       </div>

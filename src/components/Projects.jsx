@@ -154,7 +154,7 @@ const ProjectCard = ({ project, index }) => {
         {/* Top gradient bar */}
         <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${topBarMap[project.color]}`} />
         
-        <div className="relative p-8 flex flex-col h-full">
+        <div className="relative p-6 sm:p-8 flex flex-col h-full">
           {/* Header */}
           <div className="flex items-start justify-between mb-6">
             <motion.div
@@ -174,7 +174,7 @@ const ProjectCard = ({ project, index }) => {
           
           {/* Title & Tagline */}
           <div className="mb-4">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-1">
               {project.title}
             </h3>
             <p className={`text-sm font-medium ${textColorMap[project.color]}`}>
@@ -210,11 +210,11 @@ const ProjectCard = ({ project, index }) => {
           </div>
           
           {/* Action Buttons */}
-          <div className="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/10">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-4 border-t border-gray-100 dark:border-white/10">
             <motion.a
               whileHover={{ x: 4 }}
               href="#"
-              className="flex items-center gap-2 px-5 py-2.5 text-white rounded-xl font-medium transition-colors shadow-lg"
+              className="flex items-center gap-2 px-4 sm:px-5 py-2.5 text-white rounded-xl font-medium transition-colors shadow-lg"
               style={{ 
                 backgroundColor: project.hexColor,
                 boxShadow: `0 10px 15px -3px ${project.shadowColor}`
@@ -222,7 +222,7 @@ const ProjectCard = ({ project, index }) => {
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = project.hoverColor}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = project.hexColor}
             >
-              <span>View Project</span>
+              <span className="text-sm">View Project</span>
               <ArrowRight size={16} />
             </motion.a>
             
@@ -290,7 +290,7 @@ const Projects = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-5xl font-bold mb-4"
+            className="text-4xl sm:text-5xl font-bold mb-4"
           >
             <span className="bg-gradient-to-r from-gray-900 via-purple-600 to-gray-900 dark:from-white dark:via-purple-400 dark:to-white bg-clip-text text-transparent">
               Featured Projects
@@ -301,7 +301,7 @@ const Projects = () => {
             initial={{ opacity: 0 }}
             animate={isHeaderInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
           >
             A showcase of my best work, built with passion and precision
           </motion.p>

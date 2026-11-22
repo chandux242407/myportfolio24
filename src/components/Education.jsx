@@ -43,9 +43,9 @@ const educationData = [
 // Shimmer animation component for badges
 const ShimmerBadge = ({ children, color }) => {
   const colorClasses = {
-    emerald: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-    blue: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-    amber: "bg-amber-500/10 text-amber-400 border-amber-500/20"
+    emerald: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 dark:border-emerald-500/30",
+    blue: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20 dark:border-blue-500/30",
+    amber: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20 dark:border-amber-500/30"
   };
 
   return (
@@ -123,7 +123,7 @@ const EducationCard = ({ item, index }) => {
           animate={isInView ? { scale: 1, rotate: 0 } : {}}
           transition={{ type: "spring", stiffness: 200, delay: 0.3 + index * 0.1 }}
           whileHover={{ scale: 1.3, rotate: 360 }}
-          className="relative w-14 h-14 rounded-full bg-[#0a0a0a] border-2 border-cyan-500/50 flex items-center justify-center text-2xl shadow-[0_0_30px_rgba(6,182,212,0.4)]"
+          className="relative w-14 h-14 rounded-full bg-white dark:bg-[#0a0a0a] border-2 border-cyan-500/50 flex items-center justify-center text-2xl shadow-[0_0_30px_rgba(6,182,212,0.4)]"
         >
           <motion.div
             animate={isHovered ? { y: [0, -5, 0] } : {}}
@@ -148,7 +148,7 @@ const EducationCard = ({ item, index }) => {
             onMouseLeave={() => setIsHovered(false)}
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="group relative overflow-hidden rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 shadow-xl shadow-black/20 hover:shadow-[0_0_40px_rgba(6,182,212,0.15)] hover:border-cyan-500/30 transition-all duration-500"
+            className="group relative overflow-hidden rounded-2xl bg-white/[0.03] dark:bg-white/[0.03] backdrop-blur-xl border border-gray-200 dark:border-white/10 p-5 sm:p-6 shadow-xl shadow-black/20 hover:shadow-[0_0_40px_rgba(6,182,212,0.15)] hover:border-cyan-500/30 transition-all duration-500"
           >
             {/* Gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -163,12 +163,12 @@ const EducationCard = ({ item, index }) => {
               </div>
 
               {/* Degree with gradient text */}
-              <h3 className="text-xl font-bold mb-1 bg-gradient-to-r from-white via-white to-cyan-200 bg-clip-text text-transparent">
+              <h3 className="text-lg sm:text-xl font-bold mb-1 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-cyan-100 dark:to-white bg-clip-text text-transparent">
                 {item.degree}
               </h3>
 
               {/* Institution */}
-              <p className="text-gray-400 text-sm mb-3">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
                 {item.institution}{item.location && `, ${item.location}`}
               </p>
 
@@ -177,7 +177,7 @@ const EducationCard = ({ item, index }) => {
                 {item.highlights.map((highlight, i) => (
                   <span 
                     key={i}
-                    className="text-xs px-2 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10"
+                    className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10"
                   >
                     {highlight}
                   </span>
@@ -210,7 +210,7 @@ const Education = () => {
   });
 
   return (
-    <section id="education" className="py-24 relative bg-[#0a0a0a]" ref={containerRef}>
+    <section id="education" className="py-24 relative bg-gray-50 dark:bg-[#0a0a0a] transition-colors duration-300" ref={containerRef}>
       {/* Background glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[120px]" />
@@ -230,7 +230,7 @@ const Education = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-medium text-gray-300 mb-6 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-sm font-medium text-gray-600 dark:text-gray-300 mb-6 backdrop-blur-sm"
           >
             <span className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400" />
             Academic Journey
@@ -241,9 +241,9 @@ const Education = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
-            <span className="bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-900 via-cyan-600 to-gray-900 dark:from-white dark:via-cyan-100 dark:to-white bg-clip-text text-transparent">
               Education History
             </span>
           </motion.h2>
@@ -252,7 +252,7 @@ const Education = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="text-gray-400 max-w-xl mx-auto"
+            className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto"
           >
             My academic path that shaped my technical foundation
           </motion.p>
@@ -261,7 +261,7 @@ const Education = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Glowing Energy Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-white/10 to-transparent rounded-full md:-translate-x-1/2">
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-gray-300 dark:via-white/10 to-transparent rounded-full md:-translate-x-1/2">
             {/* Animated progress fill */}
             <motion.div 
               className="absolute top-0 left-0 w-full bg-gradient-to-b from-cyan-400 via-purple-400 to-cyan-400 rounded-full origin-top shadow-[0_0_20px_rgba(6,182,212,0.5)]"
@@ -270,7 +270,7 @@ const Education = () => {
           </div>
 
           {/* Education Items */}
-          <div className="flex flex-col gap-16 py-8">
+          <div className="flex flex-col gap-12 sm:gap-16 py-8">
             {educationData.map((item, index) => (
               <EducationCard key={item.id} item={item} index={index} />
             ))}

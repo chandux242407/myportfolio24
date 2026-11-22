@@ -278,7 +278,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-6xl font-bold mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
           >
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
               Technical Skills
@@ -289,7 +289,7 @@ const Skills = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
           >
             Hover over skills to reveal my journey with each technology
           </motion.p>
@@ -318,22 +318,22 @@ const Skills = () => {
                 {/* Animated border gradient */}
                 <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${category.iconBg} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                 
-                <div className="relative p-8">
+                <div className="relative p-6 sm:p-8">
                   {/* Card Header */}
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-between mb-6 sm:mb-8">
+                    <div className="flex items-center gap-3 sm:gap-4">
                       <motion.div 
                         whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.5 }}
-                        className={`p-4 rounded-2xl ${category.iconBg} ${category.iconColor} shadow-lg`}
+                        className={`p-3 sm:p-4 rounded-2xl ${category.iconBg} ${category.iconColor} shadow-lg`}
                       >
-                        <Icon size={32} strokeWidth={1.5} />
+                        <Icon size={28} strokeWidth={1.5} className="sm:w-8 sm:h-8" />
                       </motion.div>
                       <div>
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
                           {category.title}
                         </h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                           {category.subtitle}
                         </p>
                       </div>
@@ -440,7 +440,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6"
+          className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
