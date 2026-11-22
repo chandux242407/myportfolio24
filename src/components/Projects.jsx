@@ -54,14 +54,14 @@ const projects = [
     hexColor: "#3b82f6",
     hoverColor: "#2563eb",
     shadowColor: "rgba(59,130,246,0.25)",
-    stats: { users: "1K+", uptime: "99.9%" },
+    stats: { type: "Full-Stack", status: "Personal Project" },
     featured: true
   },
   {
     id: 2,
     title: "College Management System",
-    tagline: "Legacy Modernization",
-    description: "Migrated a monolithic JSP application to microservices with Spring Boot and React. Improved performance by 300% and reduced maintenance costs.",
+    tagline: "Management Platform",
+    description: "A college management system built with React and Spring Boot, featuring REST APIs, role-based access, and a responsive UI.",
     tech: [
       { name: "React.js", color: "blue" },
       { name: "Spring Boot", color: "green" },
@@ -74,7 +74,7 @@ const projects = [
     hexColor: "#10b981",
     hoverColor: "#059669",
     shadowColor: "rgba(16,185,129,0.25)",
-    stats: { improvement: "300%", users: "500+" },
+    stats: { type: "Full-Stack", status: "Academic Project" },
     featured: true
   },
   {
@@ -94,7 +94,7 @@ const projects = [
     hexColor: "#f97316",
     hoverColor: "#ea580c",
     shadowColor: "rgba(249,115,22,0.25)",
-    stats: { farmers: "2K+", reach: "10+ villages" },
+    stats: { type: "Full-Stack", status: "Personal Project" },
     featured: false
   }
 ];
